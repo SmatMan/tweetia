@@ -189,6 +189,7 @@ function App() {
   async function likeTweet(tweet_id) {
     console.log(tweet_id);
     await fetch(`http://127.0.0.1:5000/like/${tweet_id}`);
+    alert("Liked!");
     return;
   }
 
