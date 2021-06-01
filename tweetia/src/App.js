@@ -233,35 +233,43 @@ function App() {
       <div className="tweets">
         {tweets.map((tweet, index) => (
           <div className="tweetBox">
-            <p>{tweet["name"]}</p>
-            <p>{tweet["content"]}</p>
             <p>
-              <a
-                href="#"
-                onClick={() => {
-                  likeTweet(tweet["tweet_id"]);
-                }}
-              >
-                <i
-                  class={tweet["isLiked"] ? "fa fa-heart liked" : "fa fa-heart"}
-                ></i>{" "}
-                {tweet["likes"]}
-              </a>
-              <i
-                class={
-                  tweet["isRetweeted"]
-                    ? "fa fa-retweet retweeted"
-                    : "fa fa-retweet"
-                }
-              ></i>{" "}
-              {tweet["retweets"]}
+              <b>{tweet["name"]}</b> <i>(@{tweet["username"]})</i>
             </p>
+            <p>{tweet["content"]}</p>
+            <div className="interact">
+              <p>
+                <a
+                  href="#"
+                  onClick={() => {
+                    likeTweet(tweet["tweet_id"]);
+                  }}
+                >
+                  <i
+                    class={
+                      tweet["isLiked"] ? "fa fa-heart liked" : "fa fa-heart"
+                    }
+                  ></i>{" "}
+                  {tweet["likes"]}
+                </a>
+                <i
+                  class={
+                    tweet["isRetweeted"]
+                      ? "fa fa-retweet retweeted"
+                      : "fa fa-retweet"
+                  }
+                ></i>{" "}
+                {tweet["retweets"]} - <i class="date">{tweet["date"]}</i>
+              </p>
             </div>
             {tweet["image"] ? (
               <a href={tweet["image"]} target="_blank">
                 <img className="image" src={tweet["image"]}></img>
               </a>
             ) : (
+              ""
+            )}
+
             <a
               href={
                 "https://twitter.com/" +
