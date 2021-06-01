@@ -1,0 +1,48 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body {
+  background-color: #000814;
+}
+
+.tweetBox {
+  background-color: #001d3d;
+  color: #e3e4db;
+  padding: 5px;
+  margin: 10px;
+  width: 500px;
+  height: 200px;
+  border-radius: 15px;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  text-overflow: ellipsis;
+}
+
+.tweetBox a {
+  text-decoration: none;
+  color: #e3e4db;
+}
+
+.tweets {
+  text-align: center;
+  font-size: 0;
+  vertical-align: top;
+  justify-content: center;
+}
+
+.fa-heart {
+  color: grey;
+}
+
+.fa-retweet {
+  color: grey;
+  margin-left: 8px;
+}
+.liked {
+  color: red;
+}
+
+.retweeted {
+  color: lime;
+  margin-left: 8px;
+}
