@@ -166,10 +166,11 @@ function App() {
             tweet_id: response[i][4],
             likes: response[i][5],
             retweets: response[i][6],
-            image: response[i][7],
+            userimage: response[i][7],
             isLiked: response[i][8],
             isRetweeted: response[i][9],
             color: response[i][10],
+            image: response[i][11],
           });
         }
         console.log(parsedData);
