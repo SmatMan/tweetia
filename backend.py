@@ -18,6 +18,7 @@ def getTimeline(count):
     rawtl = api.home_timeline(count=count, tweet_mode="extended", exclude_replies="true")
     tl = {}
     for i,item in enumerate(rawtl):
+        
         text = rawtl[i].full_text
         user = rawtl[i].user.name
         username = rawtl[i].user.screen_name
@@ -25,12 +26,16 @@ def getTimeline(count):
         tweet_id = rawtl[i].id_str
         rts = rawtl[i].retweet_count
         likes = rawtl[i].favorite_count
-        image = rawtl[i].user.profile_image_url_https
+        userimage = rawtl[i].user.profile_image_url_https
         isLiked = rawtl[i].favorited
         isRetweeted = rawtl[i].retweeted
         color = rawtl[i].user.profile_background_color
+        try:
+            image = rawtl[i].entities["media"][0]["media_url"]
+        except KeyError:
+            image = ""
 
-        tl[i] = [user, text, username, date, tweet_id, likes, rts, image, isLiked, isRetweeted, color]
+        tl[i] = [user, text, username, date, tweet_id, likes, rts, userimage, isLiked, isRetweeted, color, image]
     return tl
 
 @app.route("/like/<id>", methods=["GET"])
