@@ -221,6 +221,15 @@ function App() {
 
   return (
     <div className="App">
+      <div className="header">
+        <img className="pfp" src={profile[3]}></img>
+        <p className="profileinformation">
+          <b>{profile[0]}</b> <i>(@{profile[1]})</i> - {profile[2]} followers
+        </p>
+        <a className="refreshButton" onClick={() => fetchData()}>
+          <i className="fa fa-refresh fa-lg"></i>
+        </a>
+      </div>
       <div className="tweets">
         {tweets.map((tweet, index) => (
           <div className="tweetBox">
