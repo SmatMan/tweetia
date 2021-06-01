@@ -42,16 +42,31 @@ def getTimeline(count):
 def like(id):
     try:
         api.create_favorite(id)
-        return True
+        return "true"
     except:
-        return False
+        return "false"
 
-def reply(api, id, content):
+def reply(id, content):
     try:
         api.update_status(status=content, in_reply_to_status_id=id)
         return True
     except:
         return False
+
+def search(query):
+    api.search_users(query)
+
+@app.route("/profile/", methods=["GET"])
+def profile(id):
+    rawprofile = api.me()
+    profile = []
+
+    profile.append(rawprofile.name)
+    profile.append(rawprofile.screen_name)
+    profile.append(rawprofile.followers_count)
+    profile.append(rawprofile.profile_image_url_https)
+
+    return profile
 
 
 

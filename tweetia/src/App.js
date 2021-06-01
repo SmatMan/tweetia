@@ -186,6 +186,32 @@ function App() {
       });
   }
 
+  async function selfProfile() {
+    var parsedData = [];
+    await fetch("http://127.0.0.1:5000/profile/")
+      .then((response) => response.json())
+      .then((response) => {
+        for (var i in response) {
+          parsedData.push({
+            name: response[i][0],
+            username: response[i][1],
+            followers: response[i][2],
+            pfp: response[i][3],
+          });
+        }
+        console.log(parsedData);
+        return parsedData;
+      })
+      .then((parsedData) => {
+        setProfile(parsedData);
+        console.log(parsedData);
+      })
+      .catch((e) => {
+        console.log(e);
+        setProfile([]);
+      });
+  }
+
   async function likeTweet(tweet_id) {
     console.log(tweet_id);
     await fetch(`http://127.0.0.1:5000/like/${tweet_id}`);
