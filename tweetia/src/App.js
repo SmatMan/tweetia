@@ -220,7 +220,23 @@ function App() {
               ></i>{" "}
               {tweet["retweets"]}
             </p>
-          </div>
+            </div>
+            {tweet["image"] ? (
+              <a href={tweet["image"]} target="_blank">
+                <img className="image" src={tweet["image"]}></img>
+              </a>
+            ) : (
+            <a
+              href={
+                "https://twitter.com/" +
+                tweet["username"] +
+                "/status/" +
+                tweet["tweet_id"]
+              }
+              target="_blank"
+            >
+              <img className="tweetpfp" src={tweet["userimage"]}></img>
+            </a>
         ))}
       </div>
     </div>
