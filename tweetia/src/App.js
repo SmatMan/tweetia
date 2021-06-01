@@ -148,7 +148,12 @@ function App() {
       color: "000000",
     },
   ]);
-  /*useEffect(() => {
+  const [profile, setProfile] = useState([
+    "bren",
+    "woaitsbren",
+    132,
+    "https://pbs.twimg.com/profile_images/1391567973614243842/_CZ7cM1o_normal.jpg",
+  ]);
     fetchData();
   }, []);*/
 
@@ -281,6 +286,7 @@ function App() {
             >
               <img className="tweetpfp" src={tweet["userimage"]}></img>
             </a>
+          </div>
         ))}
       </div>
     </div>
