@@ -92,3 +92,5 @@ config.py
 __pycache__/
 
 .vscode/
+
+a.txt
