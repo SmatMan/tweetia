@@ -16,6 +16,7 @@ body {
   display: inline-block;
   vertical-align: top;
   text-overflow: ellipsis;
+  position: relative;
 }
 
 .tweetBox a {
@@ -24,10 +25,12 @@ body {
 }
 
 .tweets {
-  text-align: center;
   font-size: 0;
+  text-align: center;
   vertical-align: top;
   justify-content: center;
+  position: relative;
+  top: 10px;
 }
 
 .fa-heart {
@@ -45,4 +48,76 @@ body {
 .retweeted {
   color: lime;
   margin-left: 8px;
+}
+
+.interact {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.tweetpfp {
+  border-radius: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.date {
+  color: grey;
+}
+
+.image {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 10px;
+  margin-right: 70px;
+  border-radius: 50px;
+}
+
+.header {
+  text-align: center;
+  height: 50px;
+  width: 90%;
+  display: table;
+  margin: 0 auto;
+  background-color: #003566;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  top: 10px;
+  position: relative;
+  border-radius: 40px;
+}
+
+.profileinformation {
+  position: relative;
+  left: 9px;
+  size: 12px;
+  color: #e3e4db;
+  float: left;
+}
+
+.pfp {
+  border-radius: 50px;
+  float: left;
+}
+
+.refreshButton {
+  float: right;
+  color: #e3e4db;
+  size: 20px;
+  background-color: #155ca2;
+  padding: 10px;
+  border-radius: 70px;
+  position: relative;
+  top: 5px;
+  cursor: pointer;
 }
