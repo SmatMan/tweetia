@@ -88,3 +88,7 @@ typings/
 .dynamodb/
 
 config.py
+
+__pycache__/
+
+.vscode/
