@@ -52,6 +52,7 @@ Tweetia is relatively simple to run.
 ## Other Notes
 
 - Pull requests for bugfixes and feature requests are welcome and highly appreciated!
+- If you are going to use code from this projet, you MUST credit either me or [this repo](https://github.com/SmatMan/tweetia).
 
 ## Footnotes
 
