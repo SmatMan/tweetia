@@ -6,8 +6,6 @@
 
 Tweetia is a (wip) simple Twitter Client built in Reactjs as a front-end and Python/Flask as a backend.
 
-![Screenshot](https://pbs.twimg.com/media/E2w-cApWEAATLkD?format=jpg&name=large)
-
 ### How does it work?
 
 Tweetia uses Flask to handle all the API calls through the `backend.py` file.
